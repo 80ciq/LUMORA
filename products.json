@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "name": "LUMORA SUNLIT Mini Candle",
+    "mood": "fresh",
+    "type": "candle",
+    "size": "60g",
+    "price": 99,
+    "image": "images/sunlit.jpg",
+    "description": "แสงแดดอ่อนยามเช้าแทรกผ่านใบไม้ กลิ่นหอมสดชื่นที่ปลุกให้วันใหม่เริ่มต้นอย่างเบาสบาย"
+  },
+  {
+    "id": 2,
+    "name": "LUMORA CLOUD NEST Mini Candle",
+    "mood": "relax",
+    "type": "candle",
+    "size": "60g",
+    "price": 99,
+    "image": "images/cloud-nest.jpg",
+    "description": "เหมือนได้ห่มผ้านุ่ม ๆ ในวันฝนพรำ กลิ่นหอมที่ชวนให้ผ่อนคลายและอยู่กับตัวเองเงียบ ๆ"
+  },
+  {
+    "id": 3,
+    "name": "LUMORA MINDSPACE Mini Candle",
+    "mood": "focus",
+    "type": "candle",
+    "size": "60g",
+    "price": 99,
+    "image": "images/mindspace.jpg",
+    "description": "กลิ่นหอมโปร่งเบาที่ช่วยจัดระเบียบความคิด เหมาะกับช่วงเวลาที่ต้องการสมาธิและความสงบ"
+  },
+  {
+    "id": 4,
+    "name": "LUMORA BLUSH HOUR Mini Candle",
+    "mood": "romance",
+    "type": "candle",
+    "size": "60g",
+    "price": 99,
+    "image": "images/blush-hour.jpg",
+    "description": "กลิ่นหอมหวานละมุนในโทนอบอุ่น ชวนให้นึกถึงแสงสีส้มยามเย็นและความรู้สึกอ่อนโยน"
+  },
+  {
+    "id": 5,
+    "name": "LUMORA SUNLIT Classic Candle",
+    "mood": "fresh",
+    "type": "candle",
+    "size": "150g",
+    "price": 229,
+    "image": "images/sunlit.jpg",
+    "description": "แสงแดดอ่อนยามเช้าแทรกผ่านใบไม้ กลิ่นหอมสดชื่นที่ปลุกให้วันใหม่เริ่มต้นอย่างเบาสบาย"
+  },
+  {
+    "id": 6,
+    "name": "LUMORA CLOUD NEST Classic Candle",
+    "mood": "relax",
+    "type": "candle",
+    "size": "150g",
+    "price": 229,
+    "image": "images/cloud-nest.jpg",
+    "description": "เหมือนได้ห่มผ้านุ่ม ๆ ในวันฝนพรำ กลิ่นหอมที่ชวนให้ผ่อนคลายและอยู่กับตัวเองเงียบ ๆ"
+  },
+  {
+    "id": 7,
+    "name": "LUMORA MINDSPACE Classic Candle",
+    "mood": "focus",
+    "type": "candle",
+    "size": "150g",
+    "price": 229,
+    "image": "images/mindspace.jpg",
+    "description": "กลิ่นหอมโปร่งเบาที่ช่วยจัดระเบียบความคิด เหมาะกับช่วงเวลาที่ต้องการสมาธิและความสงบ"
+  },
+  {
+    "id": 8,
+    "name": "LUMORA BLUSH HOUR Classic Candle",
+    "mood": "romance",
+    "type": "candle",
+    "size": "150g",
+    "price": 229,
+    "image": "images/blush-hour.jpg",
+    "description": "กลิ่นหอมหวานละมุนในโทนอบอุ่น ชวนให้นึกถึงแสงสีส้มยามเย็นและความรู้สึกอ่อนโยน"
+  },
+  {
+    "id": 9,
+    "name": "LUMORA CLOUD NEST Premium Candle",
+    "mood": "relax",
+    "type": "candle",
+    "size": "250g",
+    "price": 349,
+    "image": "images/cloud-nest.jpg",
+    "description": "เหมือนได้ห่มผ้านุ่ม ๆ ในวันฝนพรำ กลิ่นหอมที่ชวนให้ผ่อนคลายและอยู่กับตัวเองเงียบ ๆ ในเวอร์ชันที่อยู่กับคุณได้นานขึ้น"
+  },
+  {
+    "id": 10,
+    "name": "LUMORA BLUSH HOUR Premium Candle",
+    "mood": "romance",
+    "type": "candle",
+    "size": "250g",
+    "price": 349,
+    "image": "images/blush-hour.jpg",
+    "description": "กลิ่นหอมหวานละมุนในโทนอบอุ่น ชวนให้นึกถึงแสงสีส้มยามเย็นและความรู้สึกอ่อนโยน ในขนาดที่ให้ความหอมยาวนานขึ้น"
+  }
+]

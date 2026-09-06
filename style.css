@@ -1,0 +1,679 @@
+/* =========================================================
+   LUMORA — Main Stylesheet
+   Concept: "Soft Light / Cozy Room"
+   Warm Minimal · Cozy · Editorial · Modern · Soft · Natural
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   1. CSS VARIABLES
+   --------------------------------------------------------- */
+:root {
+  /* Base colors */
+  --color-warm-ivory: #F7F3EC;
+  --color-soft-cream: #EFE7DA;
+  --color-warm-sand: #D8C8B5;
+  --color-deep-cocoa: #3E342D;
+  --color-soft-taupe: #8C8176;
+
+  /* Accent */
+  --color-copper: #B77B5B;
+  --color-copper-soft: rgba(183, 123, 91, 0.35);
+
+  /* Mood colors (used sparingly — accents only) */
+  --mood-sunlit: #B7C4B0;      /* Soft Sage */
+  --mood-cloud-nest: #C8BDD0;  /* Dusty Lavender */
+  --mood-mindspace: #B7C4CA;   /* Misty Blue */
+  --mood-blush-hour: #D8AFA3;  /* Dusty Peach */
+
+  /* Typography */
+  --font-heading: "Cormorant Garamond", "Playfair Display", serif;
+  --font-body: "DM Sans", "Manrope", sans-serif;
+
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.5rem;
+  --fs-xl: 2.25rem;
+  --fs-2xl: 3rem;
+  --fs-3xl: 4rem;
+
+  --lh-tight: 1.15;
+  --lh-normal: 1.6;
+
+  --tracking-logo: 0.18em;
+  --tracking-label: 0.08em;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 7rem;
+
+  /* Border & Radius */
+  --border-thin: 1px solid rgba(62, 52, 45, 0.12);
+  --border-copper: 1px solid var(--color-copper);
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+
+  /* Shadow */
+  --shadow-soft: 0 4px 16px rgba(62, 52, 45, 0.06);
+  --shadow-hover: 0 8px 24px rgba(62, 52, 45, 0.10);
+
+  /* Transition */
+  --transition-soft: 0.35s ease;
+  --transition-fast: 0.2s ease;
+
+  /* Layout */
+  --container-max: 1280px;
+  --grid-gap: var(--space-lg);
+}
+
+/* ---------------------------------------------------------
+   2. RESET
+   --------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-warm-ivory);
+  color: var(--color-deep-cocoa);
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  line-height: var(--lh-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* ---------------------------------------------------------
+   3. TYPOGRAPHY
+   --------------------------------------------------------- */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  line-height: var(--lh-tight);
+  color: var(--color-deep-cocoa);
+}
+
+h1 {
+  font-size: var(--fs-3xl);
+}
+
+h2 {
+  font-size: var(--fs-2xl);
+}
+
+h3 {
+  font-size: var(--fs-xl);
+}
+
+p {
+  color: var(--color-deep-cocoa);
+}
+
+.text-muted {
+  color: var(--color-soft-taupe);
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-copper);
+}
+
+/* Logo / Brand wordmark */
+.logo {
+  font-family: var(--font-heading);
+  font-size: var(--fs-lg);
+  letter-spacing: var(--tracking-logo);
+  text-transform: uppercase;
+  color: var(--color-deep-cocoa);
+}
+
+/* ---------------------------------------------------------
+   4. LAYOUT
+   --------------------------------------------------------- */
+.container {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--space-lg);
+}
+
+.section {
+  padding-block: var(--space-2xl);
+}
+
+.section--tight {
+  padding-block: var(--space-xl);
+}
+
+/* Editorial header block: large type + generous breathing room */
+.editorial-header {
+  max-width: 640px;
+  margin-bottom: var(--space-xl);
+}
+
+.editorial-header .eyebrow {
+  display: inline-block;
+  margin-bottom: var(--space-xs);
+}
+
+.editorial-header h2 {
+  margin-bottom: var(--space-sm);
+}
+
+/* Slightly asymmetric two-column editorial layout */
+.editorial-split {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.editorial-split--reverse {
+  grid-template-columns: 0.9fr 1.1fr;
+}
+
+.editorial-split--reverse > *:first-child {
+  order: 2;
+}
+
+/* Product grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--grid-gap);
+}
+
+/* ---------------------------------------------------------
+   5. BUTTONS
+   --------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  padding: 0.85em 2em;
+  font-size: var(--fs-sm);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  transition: background-color var(--transition-soft),
+              color var(--transition-soft),
+              border-color var(--transition-soft);
+}
+
+.btn-primary {
+  background-color: var(--color-deep-cocoa);
+  color: var(--color-warm-ivory);
+  border: var(--border-thin);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-copper);
+  border-color: var(--color-copper);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-deep-cocoa);
+  border: 1px solid var(--color-deep-cocoa);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-deep-cocoa);
+  color: var(--color-warm-ivory);
+}
+
+/* ---------------------------------------------------------
+   6. PRODUCT CARDS
+   --------------------------------------------------------- */
+.product-card {
+  background-color: var(--color-soft-cream);
+  border: var(--border-thin);
+  border-radius: var(--radius-lg);
+  padding: var(--space-sm);
+  transition: transform var(--transition-soft),
+              border-color var(--transition-soft),
+              box-shadow var(--transition-soft);
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-copper);
+  box-shadow: var(--shadow-hover);
+}
+
+.product-card__image-wrap {
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-sm);
+  background-color: var(--color-warm-ivory);
+}
+
+.product-card__image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-soft);
+}
+
+.product-card:hover .product-card__image-wrap img {
+  transform: scale(1.04);
+}
+
+.product-card__brand {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-soft-taupe);
+  margin-bottom: 0.15em;
+}
+
+.product-card__name {
+  font-family: var(--font-heading);
+  font-size: var(--fs-md);
+  margin-bottom: var(--space-xs);
+}
+
+.product-card__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--fs-sm);
+  color: var(--color-deep-cocoa);
+}
+
+.product-card__price {
+  color: var(--color-copper);
+  font-weight: 600;
+}
+
+/* ---------------------------------------------------------
+   7. MOOD STYLES
+   (accents only — never full-card backgrounds)
+   --------------------------------------------------------- */
+.mood-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 0.4em;
+}
+
+.mood-line {
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  margin-right: 0.5em;
+  vertical-align: middle;
+}
+
+.mood-label {
+  font-size: var(--fs-xs);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-soft-taupe);
+}
+
+.mood--sunlit .mood-dot,
+.mood--sunlit .mood-line {
+  background-color: var(--mood-sunlit);
+}
+
+.mood--cloud-nest .mood-dot,
+.mood--cloud-nest .mood-line {
+  background-color: var(--mood-cloud-nest);
+}
+
+.mood--mindspace .mood-dot,
+.mood--mindspace .mood-line {
+  background-color: var(--mood-mindspace);
+}
+
+.mood--blush-hour .mood-dot,
+.mood--blush-hour .mood-line {
+  background-color: var(--mood-blush-hour);
+}
+
+/* ---------------------------------------------------------
+   8. IMAGE STYLES
+   --------------------------------------------------------- */
+.image-frame {
+  border: none;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background-color: var(--color-soft-cream);
+}
+
+.image-frame img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Decorative candle-light ring / thin lines */
+.deco-ring {
+  width: 60px;
+  height: 60px;
+  border: 1px solid var(--color-copper);
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+.deco-hr {
+  width: 48px;
+  height: 1px;
+  background-color: var(--color-copper);
+  border: none;
+  margin-block: var(--space-sm);
+}
+
+.deco-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-copper);
+  display: inline-block;
+}
+
+/* ---------------------------------------------------------
+   9. HOVER EFFECTS (shared utilities)
+   --------------------------------------------------------- */
+.hover-copper {
+  transition: color var(--transition-soft), border-color var(--transition-soft);
+}
+
+.hover-copper:hover {
+  color: var(--color-copper);
+  border-color: var(--color-copper);
+}
+
+.link-underline {
+  position: relative;
+}
+
+.link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 1px;
+  background-color: var(--color-copper);
+  transition: width var(--transition-soft);
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* ---------------------------------------------------------
+   10. RESPONSIVE
+   --------------------------------------------------------- */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  :root {
+    --fs-3xl: 3rem;
+    --fs-2xl: 2.25rem;
+    --fs-xl: 1.75rem;
+    --space-2xl: 5rem;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .editorial-split,
+  .editorial-split--reverse {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .editorial-split--reverse > *:first-child {
+    order: 0;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  :root {
+    --fs-3xl: 2.25rem;
+    --fs-2xl: 1.75rem;
+    --fs-xl: 1.4rem;
+    --space-lg: 1.75rem;
+    --space-xl: 2.5rem;
+    --space-2xl: 3.5rem;
+  }
+
+  .container {
+    padding-inline: var(--space-sm);
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+  }
+
+  .btn {
+    width: 100%;
+    padding: 1em 1.5em;
+  }
+
+  .product-card {
+    padding: var(--space-xs);
+  }
+}
+
+@media (max-width: 400px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------------------------------------------------------
+   11. FORMS (order.html)
+   --------------------------------------------------------- */
+.form-page {
+  max-width: 560px;
+  margin-inline: auto;
+}
+
+.form-group {
+  margin-bottom: var(--space-md);
+}
+
+.form-label {
+  display: block;
+  font-size: var(--fs-sm);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-soft-taupe);
+  margin-bottom: var(--space-xs);
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.85em 1em;
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  color: var(--color-deep-cocoa);
+  background-color: var(--color-warm-ivory);
+  border: var(--border-thin);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 4.5em;
+  line-height: var(--lh-normal);
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--color-copper);
+  box-shadow: 0 0 0 3px var(--color-copper-soft);
+}
+
+.form-input[readonly],
+.form-textarea[readonly] {
+  background-color: var(--color-soft-cream);
+  color: var(--color-soft-taupe);
+  cursor: default;
+}
+
+.form-summary {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-block: var(--space-xs);
+  border-bottom: var(--border-thin);
+  margin-bottom: var(--space-md);
+}
+
+.form-summary__label {
+  font-size: var(--fs-sm);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-soft-taupe);
+}
+
+.form-summary__value {
+  font-family: var(--font-heading);
+  font-size: var(--fs-lg);
+  color: var(--color-copper);
+}
+
+.form-actions {
+  margin-top: var(--space-lg);
+}
+
+.form-actions .btn {
+  width: 100%;
+}
+
+/* ---------------------------------------------------------
+   12. TABLES (admin.html)
+   --------------------------------------------------------- */
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  border: var(--border-thin);
+  border-radius: var(--radius-md);
+  -webkit-overflow-scrolling: touch;
+}
+
+.data-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  font-size: var(--fs-sm);
+}
+
+.data-table thead th {
+  text-align: left;
+  padding: var(--space-sm);
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-soft-taupe);
+  background-color: var(--color-soft-cream);
+  border-bottom: var(--border-thin);
+  white-space: nowrap;
+}
+
+.data-table tbody td {
+  padding: var(--space-sm);
+  border-bottom: var(--border-thin);
+  color: var(--color-deep-cocoa);
+  vertical-align: top;
+}
+
+.data-table tbody tr:hover {
+  background-color: var(--color-soft-cream);
+}
+
+.data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ---------------------------------------------------------
+   13. STATUS / CONFIRMATION PAGE (thankyou.html)
+   --------------------------------------------------------- */
+.confirmation-page {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-block: var(--space-2xl);
+}
+
+.confirmation-page .deco-ring {
+  margin-bottom: var(--space-md);
+}
+
+.confirmation-page h1 {
+  margin-bottom: var(--space-xs);
+}
+
+.confirmation-page p {
+  max-width: 420px;
+  color: var(--color-soft-taupe);
+  margin-bottom: var(--space-lg);
+}
+
+/* Responsive tweaks for forms & tables */
+@media (max-width: 640px) {
+  .form-page {
+    max-width: 100%;
+  }
+
+  .data-table {
+    min-width: 600px;
+  }
+}

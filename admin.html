@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>รายการคำสั่งซื้อ | LUMORA Admin</title>
+  <meta name="description" content="LUMORA — หน้าสำหรับดูรายการคำสั่งซื้อทั้งหมด" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="container section--tight">
+    <a href="index.html" class="logo">LUMORA</a>
+  </header>
+
+  <main class="container section--tight">
+    <div class="editorial-header">
+      <span class="eyebrow">LUMORA Admin</span>
+      <h1>รายการคำสั่งซื้อ</h1>
+      <p class="text-muted">ข้อมูลคำสั่งซื้อทั้งหมดที่ลูกค้าส่งเข้ามาจะแสดงในตารางด้านล่าง</p>
+    </div>
+
+    <hr class="deco-hr" />
+
+    <div class="table-wrap">
+      <table id="ordersTable" class="data-table">
+        <thead>
+          <tr>
+            <th scope="col">วันเวลา</th>
+            <th scope="col">ชื่อลูกค้า</th>
+            <th scope="col">เบอร์โทร/Line</th>
+            <th scope="col">รายการสินค้า</th>
+            <th scope="col">จำนวนเงินรวม</th>
+            <th scope="col">หมายเหตุ</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer class="container section--tight">
+    <p class="text-muted" style="text-align:center; font-size: var(--fs-xs);">
+      © LUMORA — Light Your Moment
+    </p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
